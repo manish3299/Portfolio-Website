@@ -293,6 +293,7 @@ h6{
 .project1 {
     background: url("photos/Slack Clone.jpg") no-repeat 50% 50%;
     background-size: cover;
+    border-radius: 5px;
 }
 
 .project1::after{
@@ -306,11 +307,13 @@ h6{
     left: -60%;
     right: 0;
     bottom: 0;
+    border-radius: 5px;
 }
 
 .project2 {
-    background: url("photos/Man-city.png") no-repeat 50% 50%;
+    background: url("photos/weatherapp.png") no-repeat 50% 50%;
     background-size: cover;
+    border-radius: 5px;
 }
 
 .project2::after {
@@ -324,11 +327,13 @@ h6{
     left: 90%;
     right: 0;
     bottom: 0;
+    border-radius: 5px;
 }
 
 .project3 {
     background: url("photos/dashboard.jpg") no-repeat 50% 50%;
     background-size: cover;
+    border-radius: 5px;
 }
 
 .project3::after {
@@ -342,15 +347,18 @@ h6{
     left: -50%;
     right: 0;
     bottom: 0;
+    border-radius: 5px;
 }
 
 .project4 {
-    background: url(https://images.unsplash.com/photo-1435685813800-51ba4ceb9c4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1785&q=80) no-repeat 50% 50%;
+    background: url("photos/chatapp1.png") no-repeat 50% 50%;
     background-size: cover;
+    border-radius: 5px;
 }
 
+
 .project4::after {
-    content: "departure.";
+    content: "chat app";
     font-family: "Roboto Mono";
     font-size: 36px;
     position: relative;
@@ -360,6 +368,7 @@ h6{
     left: 90%;
     right: 0;
     bottom: 0;
+    border-radius: 5px;
 }
 
 @media(max-width: 768px) {
