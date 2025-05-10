@@ -1,213 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Portfolio Page</title>
     <!-- stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <!-- bootstrap cdn -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+      rel="stylesheet"
+    />
 
     <!-- terminal effect -->
     <script src="t.min.js"></script>
 
     <!-- for on scroll animations -->
-    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="animate.css" />
     <script src="wow.min.js"></script>
-</head>
-<body>
-<div class="wrapper">
-
-    <!--------------- navbar starts here --------------->
-    <nav>
-                  <span id="brand">
-                        <a href="index.html">Manish</a>
-                  </span>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--------------- navbar starts here --------------->
+      <nav>
+        <span id="brand">
+          <a href="index.html">Manish</a>
+        </span>
 
         <ul class="menu">
-            <li><a href="index.html">home<span>.</span></a></li>
-            <li><a href="work.html">work<span>.</span></a></li>
-            <li><a href="about.html">about me<span>.</span></a></li>
-            <li><a href="contact.html">contact<span>.</span></a></li>
+          <li>
+            <a href="index.html">home<span>.</span></a>
+          </li>
+          <li>
+            <a href="work.html">work<span>.</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#opensource">Open Source</a>
+          </li>
+
+          <li>
+            <a href="about.html">about me<span>.</span></a>
+          </li>
+          <li>
+            <a href="contact.html">contact<span>.</span></a>
+          </li>
         </ul>
 
         <div id="toggle">
-            <div class="span">menu</div>
+          <div class="span">menu</div>
         </div>
+      </nav>
 
-    </nav>
-
-    <div id="resize">
+      <div id="resize">
         <div class="close-btn">close</div>
 
         <ul class="menu">
-            <li><a href="index.html">home<span>.</span></a></li>
-            <li><a href="work.html">work<span>.</span></a></li>
-            <li><a href="about.html">about me<span>.</span></a></li>
-            <li><a href="contact.html">contact<span>.</span></a></li>
+          <li>
+            <a href="index.html">home<span>.</span></a>
+          </li>
+          <li>
+            <a href="work.html">work<span>.</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#opensource">Open Source</a>
+          </li>
+          <li>
+            <a href="about.html">about me<span>.</span></a>
+          </li>
+          <li>
+            <a href="contact.html">contact<span>.</span></a>
+          </li>
         </ul>
-    </div>
-    <!--------------- navbar ends here --------------->
+      </div>
+      <!--------------- navbar ends here --------------->
 
-
-
-    <!--------------- hero section starts here --------------->
-    <div class="hero">
+      <!--------------- hero section starts here --------------->
+      <div class="hero">
         <div class="header">
-            <h1 class="line anim-typewriter">Howdy! A new dev is in town.</h1>
+          <h1 class="line anim-typewriter">Howdy! A new dev is in town.</h1>
         </div>
-    </div>
+      </div>
 
-    <div class="scroll-down"></div>
-    <!--------------- hero section ends here --------------->
+      <div class="scroll-down"></div>
+      <!--------------- hero section ends here --------------->
 
-
-
-    <!--------------- projects section starts here --------------->
-    <div class="container-fluid">
-        <br><br><br>
+      <!--------------- projects section starts here --------------->
+      <div class="container-fluid">
+        <br /><br /><br />
 
         <h6>My projects</h6>
 
         <div class="vertical"></div>
-        <br>
+        <br />
 
         <div class="whitespace"></div>
         <div class="whitespace"></div>
 
         <div class="row">
-            <div class="col-lg-8"></div>
+          <div class="col-lg-8"></div>
 
-            <div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='projects/project1.html'"></div>
+          <div
+            class="col-lg-4 project project1 wow fadeInUp"
+            onclick="location.href='projects/project1.html'"
+          ></div>
         </div>
 
         <div class="whitespace"></div>
 
         <div class="row">
-            <div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='projects/project2.html'"></div>
+          <div
+            class="col-lg-6 project project2 wow fadeInUp"
+            onclick="location.href='projects/project2.html'"
+          ></div>
 
-            <div class="col-lg-6"></div>
+          <div class="col-lg-6"></div>
         </div>
 
         <div class="whitespace"></div>
 
         <div class="row">
-            <div class="col-lg-7"></div>
+          <div class="col-lg-7"></div>
 
-            <div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='projects/project3.html'"></div>
+          <div
+            class="col-lg-4 project project3 wow fadeInUp"
+            onclick="location.href='projects/project3.html'"
+          ></div>
 
-            <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
         </div>
 
         <div class="whitespace"></div>
 
         <div class="row">
-            <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
 
-            <div class="col-lg-5 project project4 wow fadeInUp" onclick="location.href='projects/project4.html'"></div>
+          <div
+            class="col-lg-5 project project4 wow fadeInUp"
+            onclick="location.href='projects/project4.html'"
+          ></div>
 
-            <div class="col-lg-6"></div>
+          <div class="col-lg-6"></div>
         </div>
 
         <div class="whitespace"></div>
-    </div>
-    <!--------------- projects section ends here --------------->
-
-
-
-    <!--------------- footer starts here --------------->
-    <div class="footer">
+      </div>
+      <!--------------- projects section ends here --------------->
+      <section id="opensource" class="py-5 bg-light">
         <div class="container">
-            <br><br>
-
-            <div class="collab">
-                <div class="row">
-                    <div class="col-lg-12" onclick="location.href='contact.html'">
-                        <p class="line anim-typewriter">Got an interesting project? I can help you.</p>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="hr">
-                <div class="row"></div>
-            </div>
-
-            <br><br>
-
-            <div class="info">
-                <div class="row">
-                    <div class="col-lg-4" id="personal">
-                        <p class="wow fadeInUp">connect with me</p>
-                        <h4 class="wow fadeInUp" data-wow-delay="0.4s"><a href="https://www.linkedin.com/in/manishambarwar">linkedin</a> </h4>
-                        <br><br>
-                    </div>
-
-                    <div class="col-lg-4" id="media">
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">follow me</p>
-
-                        <ul>
-                            <li id="fb" class="wow fadeInUp" data-wow-delay="0.6s"><a href="https://www.codechef.com/users/manish_32">cc</a></li>
-                            <li id="ig" class="wow fadeInUp" data-wow-delay="0.8s"><a href="https://www.linkedin.com/in/manishambarwar">ln</a></li>
-                            <li id="tw" class="wow fadeInUp" data-wow-delay="1s"><a href="https://github.com/manish3299">gh</a></li>
-                            <li id="yt" class="wow fadeInUp" data-wow-delay="1.2s"><a href="https://leetcode.com/manish_32/">lc</a></li>
-                        </ul>
-
-                        <br><br>
-                    </div>
-
-                    <div class="col-lg-4" id="address">
-                        <p class="wow fadeInUp" data-wow-delay="0.4s">say hello👋</p>
-                        <h4 class="wow fadeInUp" data-wow-delay="1.4s"><a href = "mailto: ambarwarm1234@gmail.com">Send Email</a></h4>
-                        <br><br>
-                    </div>
-                </div>
-            </div>
+          <h2 class="text-center mb-5 wow fadeInUp">
+            Open Source Contributions
+          </h2>
+          <div id="opensource-projects" class="row">
+            <!-- GitHub repos load here -->
+          </div>
         </div>
+      </section>
+
+      <!--------------- footer starts here --------------->
+      <div class="footer">
+        <div class="container">
+          <br /><br />
+
+          <div class="collab">
+            <div class="row">
+              <div class="col-lg-12" onclick="location.href='contact.html'">
+                <p class="line anim-typewriter">
+                  Got an interesting project? I can help you.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="hr">
+            <div class="row"></div>
+          </div>
+
+          <br /><br />
+
+          <div class="info">
+            <div class="row">
+              <div class="col-lg-4" id="personal">
+                <p class="wow fadeInUp">connect with me</p>
+                <h4 class="wow fadeInUp" data-wow-delay="0.4s">
+                  <a href="https://www.linkedin.com/in/manishambarwar"
+                    >linkedin</a
+                  >
+                </h4>
+                <br /><br />
+              </div>
+
+              <div class="col-lg-4" id="media">
+                <p class="wow fadeInUp" data-wow-delay="0.2s">follow me</p>
+
+                <ul>
+                  <li id="fb" class="wow fadeInUp" data-wow-delay="0.6s">
+                    <a href="https://www.codechef.com/users/manish_32">cc</a>
+                  </li>
+                  <li id="ig" class="wow fadeInUp" data-wow-delay="0.8s">
+                    <a href="https://www.linkedin.com/in/manishambarwar">ln</a>
+                  </li>
+                  <li id="tw" class="wow fadeInUp" data-wow-delay="1s">
+                    <a href="https://github.com/manish3299">gh</a>
+                  </li>
+                  <li id="yt" class="wow fadeInUp" data-wow-delay="1.2s">
+                    <a href="https://leetcode.com/manish_32/">lc</a>
+                  </li>
+                </ul>
+
+                <br /><br />
+              </div>
+
+              <div class="col-lg-4" id="address">
+                <p class="wow fadeInUp" data-wow-delay="0.4s">say hello👋</p>
+                <h4 class="wow fadeInUp" data-wow-delay="1.4s">
+                  <a href="mailto: ambarwarm1234@gmail.com">Send Email</a>
+                </h4>
+                <br /><br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--------------- footer ends here --------------->
+
+      <br /><br /><br /><br />
     </div>
-    <!--------------- footer ends here --------------->
 
-    <br><br><br><br>
+    <!-- greensock cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
-</div>
-
-<!-- greensock cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script type="text/javascript">
-    // navigation starts here
-    $("#toggle").click(function() {
-        $(this).toggleClass('on');
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+      // navigation starts here
+      $("#toggle").click(function () {
+        $(this).toggleClass("on");
         $("#resize").toggleClass("active");
-    });
-    $("#resize ul li a").click(function() {
-        $(this).toggleClass('on');
+      });
+      $("#resize ul li a").click(function () {
+        $(this).toggleClass("on");
         $("#resize").toggleClass("active");
-    });
-    $(".close-btn").click(function() {
-        $(this).toggleClass('on');
+      });
+      $(".close-btn").click(function () {
+        $(this).toggleClass("on");
         $("#resize").toggleClass("active");
-    });
-    // navigation ends here
-    // nav animation
-    TweenMax.from("#brand", 1, {
+      });
+      // navigation ends here
+      // nav animation
+      TweenMax.from("#brand", 1, {
         delay: 0.4,
         y: 10,
         opacity: 0,
-        ease: Expo.easeInOut
-    })
-    TweenMax.staggerFrom("#menu li a", 1, {
-        delay: 0.4,
-        opacity: 0,
-        ease: Expo.easeInOut
-    }, 0.1);
-    // nav animation ends
-    new WOW().init();
-</script>
+        ease: Expo.easeInOut,
+      });
+      TweenMax.staggerFrom(
+        "#menu li a",
+        1,
+        {
+          delay: 0.4,
+          opacity: 0,
+          ease: Expo.easeInOut,
+        },
+        0.1
+      );
+      // nav animation ends
+      new WOW().init();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const username = "manish3299";
+        const repoContainer = document.getElementById("opensource-projects");
+
+        fetch(`https://api.github.com/users/${username}/repos?per_page=100`)
+          .then((response) => response.json())
+          .then((data) => {
+            const publicRepos = data
+              .filter((repo) => !repo.fork)
+              .sort((a, b) => b.stargazers_count - a.stargazers_count)
+              .slice(0, 6); // show top 6
+
+            if (publicRepos.length === 0) {
+              repoContainer.innerHTML =
+                "<p class='text-center'>No public open source projects found.</p>";
+              return;
+            }
+
+            publicRepos.forEach((repo, index) => {
+              const col = document.createElement("div");
+              col.className = "col-md-6 col-lg-4 mb-4 wow fadeInUp";
+              col.setAttribute("data-wow-delay", `${index * 0.1}s`);
+
+              const card = `
+          <div class="card h-100 border-0 shadow-sm hover-shadow">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">${repo.name}</h5>
+              <p class="card-text flex-grow-1 text-muted small">${
+                repo.description || "No description available."
+              }</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="badge bg-primary">${repo.language || "Code"}</span>
+                <div>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</div>
+              </div>
+              <a href="${
+                repo.html_url
+              }" target="_blank" class="btn btn-outline-dark mt-3">View on GitHub</a>
+            </div>
+          </div>
+        `;
+
+              col.innerHTML = card;
+              repoContainer.appendChild(col);
+            });
+
+            if (typeof WOW === "function") {
+              new WOW().init();
+            }
+          })
+          .catch((error) => {
+            console.error("GitHub fetch error:", error);
+            repoContainer.innerHTML =
+              "<p class='text-center text-danger'>Failed to load repositories.</p>";
+          });
+      });
+    </script>
+  </body>
+</html>
