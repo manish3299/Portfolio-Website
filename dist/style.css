@@ -645,3 +645,19 @@ textarea:focus {
   transform: translateY(-3px);
   transition: 0.3s ease;
 }
+#opensource {
+  background: linear-gradient(135deg, #f7f8fa, #e2e8f0);
+  padding: 60px 0;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
