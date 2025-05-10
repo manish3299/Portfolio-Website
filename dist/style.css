@@ -661,3 +661,11 @@ textarea:focus {
   transform: translateY(-6px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 }
+
+.card-title,
+.card-text,
+.badge,
+.text-muted,
+.btn-outline-dark {
+  color: #212529 !important;
+}
