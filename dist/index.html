@@ -281,6 +281,7 @@
       new WOW().init();
 
       // Fetch and filter Open Source Repos (more than 3 commits)
+
       document.addEventListener("DOMContentLoaded", function () {
         const username = "manish3299";
         const repoContainer = document.getElementById("opensource-projects");
@@ -308,7 +309,7 @@
             }
 
             // Sort by stars
-            filtered.sort((a, b) => b.stargazers_count - a.stargazers_count);
+            filtered.sort((a, b) => b.commitCount - a.commitCount);
 
             if (filtered.length === 0) {
               repoContainer.innerHTML =
