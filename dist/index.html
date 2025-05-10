@@ -244,6 +244,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Place this inside <script> tag at the end of your index.html -->
+
     <script type="text/javascript">
       // navigation starts here
       $("#toggle").click(function () {
@@ -258,7 +260,7 @@
         $(this).toggleClass("on");
         $("#resize").toggleClass("active");
       });
-      // navigation ends here
+
       // nav animation
       TweenMax.from("#brand", 1, {
         delay: 0.4,
@@ -276,63 +278,87 @@
         },
         0.1
       );
-      // nav animation ends
       new WOW().init();
 
+      // Fetch and filter Open Source Repos (more than 3 commits)
       document.addEventListener("DOMContentLoaded", function () {
         const username = "manish3299";
         const repoContainer = document.getElementById("opensource-projects");
 
-        fetch(`https://api.github.com/users/${username}/repos?per_page=100`)
-          .then((response) => response.json())
-          .then((data) => {
-            const publicRepos = data
-              .filter((repo) => !repo.fork)
-              .sort((a, b) => b.stargazers_count - a.stargazers_count)
-              .slice(0, 6); // show top 6
+        async function fetchRepos() {
+          try {
+            const res = await fetch(
+              `https://api.github.com/users/${username}/repos?per_page=100`
+            );
+            const repos = await res.json();
 
-            if (publicRepos.length === 0) {
+            const filtered = [];
+
+            for (const repo of repos) {
+              if (repo.fork) continue;
+
+              const commitsRes = await fetch(
+                repo.commits_url.replace("{/sha}", "")
+              );
+              const commits = await commitsRes.json();
+
+              if (Array.isArray(commits) && commits.length > 3) {
+                filtered.push({ ...repo, commitCount: commits.length });
+              }
+            }
+
+            // Sort by stars
+            filtered.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+            if (filtered.length === 0) {
               repoContainer.innerHTML =
-                "<p class='text-center'>No public open source projects found.</p>";
+                "<p class='text-center'>No active open source projects with 4+ commits.</p>";
               return;
             }
 
-            publicRepos.forEach((repo, index) => {
+            filtered.slice(0, 6).forEach((repo, index) => {
               const col = document.createElement("div");
               col.className = "col-md-6 col-lg-4 mb-4 wow fadeInUp";
               col.setAttribute("data-wow-delay", `${index * 0.1}s`);
 
               const card = `
-          <div class="card h-100 border-0 shadow-sm hover-shadow">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">${repo.name}</h5>
-              <p class="card-text flex-grow-1 text-muted small">${
-                repo.description || "No description available."
-              }</p>
-              <div class="d-flex justify-content-between align-items-center mt-3">
-                <span class="badge bg-primary">${repo.language || "Code"}</span>
-                <div>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</div>
-              </div>
-              <a href="${
-                repo.html_url
-              }" target="_blank" class="btn btn-outline-dark mt-3">View on GitHub</a>
-            </div>
-          </div>
-        `;
+                  <div class="card h-100 border-0 shadow-sm hover-shadow">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">${repo.name}</h5>
+                      <p class="card-text flex-grow-1 text-muted small">
+                        ${repo.description || "No description available."}
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="badge bg-primary">${
+                          repo.language || "Code"
+                        }</span>
+                        <div>⭐ ${repo.stargazers_count} | 🍴 ${
+                repo.forks_count
+              }</div>
+                      </div>
+                      <p class="text-muted small mt-1">📦 ${
+                        repo.commitCount
+                      } commits</p>
+                      <a href="${
+                        repo.html_url
+                      }" target="_blank" class="btn btn-outline-dark mt-3">View on GitHub</a>
+                    </div>
+                  </div>
+                `;
 
               col.innerHTML = card;
               repoContainer.appendChild(col);
             });
 
-            if (typeof WOW === "function") {
-              new WOW().init();
-            }
-          })
-          .catch((error) => {
-            console.error("GitHub fetch error:", error);
+            if (typeof WOW === "function") new WOW().init();
+          } catch (err) {
+            console.error("Error fetching repos:", err);
             repoContainer.innerHTML =
               "<p class='text-center text-danger'>Failed to load repositories.</p>";
-          });
+          }
+        }
+
+        fetchRepos();
       });
     </script>
   </body>
